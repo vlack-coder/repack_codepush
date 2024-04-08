@@ -11,9 +11,19 @@ const resolveUrl = () => {
 
   const resolveURL = Federated.createURLResolver({
     containers: {
+      // ghanawater: 'http://localhost:9002/[name][ext]',
+      ghanawater:
+        'https://github.com/coderkomal/minighana/releases/download/Ghana/[name][ext]',
+
       // BusinessTv: 'http://localhost:9003/[name][ext]',
+      BusinessTv:
+        'https://github.com/coderkomal/miniapp/releases/download/TV/[name][ext]',
       // app1: 'http://localhost:9005/[name][ext]',
       // MiniApp: 'http://localhost:9000/[name][ext]',
+      MiniApp:
+        'https://github.com/vlack-coder/electricpack/releases/download/test1/[name][ext]',
+      //   'https://github.com/vlack-coder/electricpack/releases/download/test2/[name][ext]',
+      // // app1: 'https://github.com/vlack-coder/repacbundle/releases/download/repack-android/[name][ext]',
     },
   });
   // Create resolve function

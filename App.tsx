@@ -40,7 +40,8 @@ function App(): JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <View style={styles.sectionContainer}>
-        <Text style={styles.headerText}>CodePush Test with RePack</Text>
+        {/* <Text style={styles.headerText}>CodePush Test with RePack</Text> */}
+        <Text style={styles.headerText}>This is the latest CodePush Test with RePack</Text>
         <CodepushManager />
       </View>
     </SafeAreaView>
@@ -58,6 +59,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'white',
     fontWeight: 'bold',
+    textAlign: 'center'
   },
   sectionTitle: {
     fontSize: 24,
