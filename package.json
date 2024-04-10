@@ -10,7 +10,8 @@
     "start:repack": "react-native webpack-start --reset-cache",
     "adb": "adb reverse tcp:8081 tcp:8081",
     "test": "jest",
-    "release:android": "cd android && ./gradlew assembleRelease"
+    "release-android": "cd android && ./gradlew assembleRelease",
+    "push": "appcenter codepush release-react -a ajims119-gmail.com/rapckA"
   },
   "dependencies": {
     "react": "18.2.0",

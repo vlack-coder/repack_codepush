@@ -8,7 +8,6 @@ import {name as appName} from './app.json';
 import {Federated, Script, ScriptManager} from '@callstack/repack/client';
 
 const resolveUrl = () => {
-
   const resolveURL = Federated.createURLResolver({
     containers: {
       // ghanawater: 'http://localhost:9002/[name][ext]',
@@ -30,6 +29,8 @@ const resolveUrl = () => {
   ScriptManager.shared.addResolver(async (scriptId, caller) => {
     // Try to resolve URL based on scriptId and caller
     let url;
+    const callers = {};
+    // ScriptManager.shared
     console.log('caller', caller);
     if (caller === 'main') {
       url = Script.getDevServerURL(scriptId);
@@ -41,7 +42,6 @@ const resolveUrl = () => {
       return undefined;
     }
     console.log('urlssuwggy', url);
-
     return {
       url,
       cache: false, // For development
@@ -50,6 +50,26 @@ const resolveUrl = () => {
         platform: Platform.OS,
       },
       verifyScriptSignature: __DEV__ ? 'off' : 'strict',
+      shouldUpdateScript: async (scriptId, caller, isScriptCacheOutdated) => {
+        if (caller && callers[caller] !== undefined) {
+          return callers[caller];
+        }
+
+        if (!isScriptCacheOutdated) {
+          return true;
+        }
+
+        const shouldUpdate = await alertAsync(
+          'Update available',
+          'A new version of the app is available. Do you want to update?',
+        );
+
+        if (!caller) {
+          callers[scriptId] = shouldUpdate;
+        }
+
+        return shouldUpdate;
+      },
     };
   });
 };
