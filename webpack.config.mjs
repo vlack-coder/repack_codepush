@@ -244,6 +244,31 @@ export default (env) => {
           assetsPath,
         },
       }),
+      new Repack.plugins.ModuleFederationPlugin({
+        name: 'codepush_repack',
+        shared: {
+          react: {
+            singleton: true,
+            eager: true,
+            requiredVersion: '18.2.0',
+          },
+          'react-native': {
+            singleton: true,
+            eager: true,
+            requiredVersion: '0.72.5',
+          },
+          // 'react-native-gesture-handler': {
+          //   singleton: true,
+          //   eager: true,
+          //   requiredVersion: '^2.16.0',
+          // },
+          // 'react-native-reanimated': {
+          //   singleton: true,
+          //   eager: true,
+          //   requiredVersion: '^3.8.1',
+          // },
+        },
+      }),
     ],
   };
 };

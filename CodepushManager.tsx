@@ -76,7 +76,7 @@ const CodepushManager = () => {
 
   return (
     <View>
-      <Text>CodepushManager</Text>
+      <Text>CodepushManager is tayad of your ass</Text>
       <Modal
         animationType="slide"
         transparent={true}

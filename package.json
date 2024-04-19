@@ -10,14 +10,19 @@
     "start:repack": "react-native webpack-start --reset-cache",
     "adb": "adb reverse tcp:8081 tcp:8081",
     "test": "jest",
+    "bundle": "npx react-native webpack-bundle --platform android  --entry-file index.js  --bundle-output ./CodePush/index.android.bundle --assets-dest ./CodePush  --dev false",
     "release-android": "cd android && ./gradlew assembleRelease",
-    "push": "appcenter codepush release-react -a ajims119-gmail.com/rapckA"
+    "login": "appcenter login",
+    "push": "appcenter codepush release-react -a ajims119-gmail.com/rapckA",
+    "pus": "appcenter codepush release -a ajims119-gmail.com/rapckA -c ./CodePush -t 1.0"
   },
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.72.5",
     "react-native-code-push": "^8.2.2",
+    "react-native-gesture-handler": "^2.16.0",
     "react-native-progress": "^5.0.1",
+    "react-native-reanimated": "^3.8.1",
     "react-native-svg": "^15.1.0"
   },
   "devDependencies": {
