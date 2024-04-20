@@ -1,0 +1,198 @@
+{
+  "project_info": {
+    "project_number": "352789875804",
+    "project_id": "momo-dev-395b8",
+    "storage_bucket": "momo-dev-395b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352789875804:android:54f26356c02666abb96a99",
+        "android_client_info": {
+          "package_name": "com.momo.business.uat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6lTjgSMIml7jX1X3tgiRwhVJ6vE_5dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "352789875804-likco37rht78hdaqm3ljk0cl1ig3fqmg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mtn.momo.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352789875804:android:135a23b3c2b72730b96a99",
+        "android_client_info": {
+          "package_name": "com.codepush_repack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6lTjgSMIml7jX1X3tgiRwhVJ6vE_5dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "352789875804-likco37rht78hdaqm3ljk0cl1ig3fqmg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mtn.momo.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352789875804:android:a42c963317a3416fb96a99",
+        "android_client_info": {
+          "package_name": "com.momo.consumer.uat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6lTjgSMIml7jX1X3tgiRwhVJ6vE_5dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "352789875804-likco37rht78hdaqm3ljk0cl1ig3fqmg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mtn.momo.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352789875804:android:fa1a9b3cfefb047cb96a99",
+        "android_client_info": {
+          "package_name": "com.mtn.momo.business.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6lTjgSMIml7jX1X3tgiRwhVJ6vE_5dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "352789875804-likco37rht78hdaqm3ljk0cl1ig3fqmg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mtn.momo.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352789875804:android:73d64db012e3faf5b96a99",
+        "android_client_info": {
+          "package_name": "com.mtn.momo.consumer.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352789875804-ca8k1h9h30j35gbllt7sagifcc0mdk1e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mtn.momo.consumer.dev",
+            "certificate_hash": "cd08b1796ebae9a41d87dac05daa173bc08a1d56"
+          }
+        },
+        {
+          "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6lTjgSMIml7jX1X3tgiRwhVJ6vE_5dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352789875804-c9tmf7q8lh2kqhib8tuf2qob6g11deoq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "352789875804-likco37rht78hdaqm3ljk0cl1ig3fqmg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mtn.momo.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
