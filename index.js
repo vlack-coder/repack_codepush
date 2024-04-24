@@ -1,7 +1,6 @@
 /**
  * @format
  */
-require.include('react-native-svg') 
 import {AppRegistry} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
@@ -73,6 +72,6 @@ const resolveUrl = () => {
     };
   });
 };
-resolveUrl();
+// resolveUrl();
 
 AppRegistry.registerComponent(appName, () => App);
