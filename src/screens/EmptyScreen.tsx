@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {
   Button,
   StatusBar,
@@ -6,19 +6,44 @@ import {
   Text,
   View,
   useColorScheme,
+  Image,
 } from 'react-native';
 import {AuthContext} from '../contexts/AuthContext';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Box from '../Box';
+import {ScrollView} from 'react-native-gesture-handler';
+// import QRCode from 'react-native-qrcode-svg';
+// import QR from './QR';
+import RNQRGenerator from 'rn-qr-generator';
 
 const EmptyScreen = () => {
   const {logout} = useContext(AuthContext);
   const isDarkMode = useColorScheme() === 'dark';
   const [show, setShow] = useState(true);
+  const [url, seturl] = useState('');
+  // const ass = () =>{
+  //   QR('this is a QR code', 'M')
+  // }
+  // console.log('ass', ass())
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    RNQRGenerator.generate({
+      value: "ID:1790176@momopay",
+      height: 500,
+      width: 500,
+      color: 'blue'
+    })
+      .then(response => {
+        const {uri, width, height, base64} = response;
+        console.log('uri', uri);
+        seturl(uri);
+      })
+      .catch(error => console.log('Cannot create QR code', error));
+  }, []);
 
   const handleLogin = () => {
     // Perform validation, e.g., check if fields are not empty
@@ -26,45 +51,69 @@ const EmptyScreen = () => {
     // Call login function from AuthContext to authenticate user
     logout();
   };
+  console.log('url', url);
   return (
-    <View
+    <ScrollView
       style={{
+        flexGrow: 1,
         flex: 1,
-        backgroundColor: 'green',
+      }}
+      contentContainerStyle={{
+        flexGrow: 1,
       }}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
       <View
         style={{
-          paddingHorizontal: 40,
-          marginTop: 20,
+          flex: 1,
+          backgroundColor: 'white',
         }}>
-        <Button title="Logout" onPress={handleLogin} />
-      </View>
-
-      <View style={styles.sectionContainer}>
-        <Text style={styles.headerText}>Test the money wella leiedjf</Text>
-        <Text style={styles.headerText}>
-          What are you saying is correct small What are you saying is correct
-          small What are you saying is correct small
-        </Text>
-
-        {show && <Box />}
-        <View
-          style={{
-            marginTop: 30,
-          }}>
-          <Button
-            title={show ? 'Hide' : 'Show'}
-            onPress={() => {
-              setShow(p => !p);
+        <StatusBar
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          backgroundColor={backgroundStyle.backgroundColor}
+        />
+        {url && (
+          <Image
+            src={url}
+            style={{
+              height: 300,
+              width: 300,
+              borderRadius: 40
             }}
           />
+        )}
+        {/* <QRCode value={'Love me jeje'} size={110} />
+        <QRCode value={'Love me jeje'} size={110} />
+        <QRCode value={'Love me jeje'} size={110} />
+        <QRCode value={'Love me jeje'} size={110} /> */}
+
+        <View
+          style={{
+            paddingHorizontal: 40,
+            marginTop: 20,
+          }}>
+          <Button title="Logout" onPress={handleLogin} />
         </View>
+
+        {/* <View style={styles.sectionContainer}>
+          <Text style={styles.headerText}>Test the money wella leiedjf</Text>
+          <Text style={styles.headerText}>
+            Love is not enough, baby me lowo
+          </Text>
+
+          {show && <Box />}
+          <View
+            style={{
+              marginTop: 30,
+            }}>
+            <Button
+              title={show ? 'Hide' : 'Show'}
+              onPress={() => {
+                setShow(p => !p);
+              }}
+            />
+          </View>
+        </View> */}
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

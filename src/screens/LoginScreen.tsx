@@ -1,11 +1,15 @@
 import React, { useState, useContext } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import { AuthContext } from '../contexts/AuthContext';
+import QRCode from 'qrcode'
 
 const LoginScreen = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const { login } = useContext(AuthContext);
+  QRCode.toDataURL('I am a pony!', function (err, url) {
+    console.log(url)
+  })
 
   const handleLogin = () => {
     // Perform validation, e.g., check if fields are not empty
@@ -22,6 +26,7 @@ const LoginScreen = () => {
         placeholder="Username or Email"
         value={username}
         onChangeText={setUsername}
+        placeholderTextColor={'#000'}
       />
       <TextInput
         style={styles.input}
@@ -29,6 +34,7 @@ const LoginScreen = () => {
         secureTextEntry={true}
         value={password}
         onChangeText={setPassword}
+        placeholderTextColor={'#000'}
       />
       <Button title="Login" onPress={handleLogin} />
     </View>
@@ -42,9 +48,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: "black"
   },
   input: {
     width: '80%',
@@ -54,6 +61,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 10,
     paddingHorizontal: 10,
+    color: "black",
   },
 });
 

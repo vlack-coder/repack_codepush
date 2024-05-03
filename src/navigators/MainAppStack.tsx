@@ -9,9 +9,9 @@ const MainStack = () => {
   return (
     <Stack.Navigator
       initialRouteName="mainstack"
-      // screenOptions={{
-      // }}
-    >
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Stack.Screen name="mainstack" component={EmptyScreen} />
       {/* <Stack.Screen name="Signup" component={SignupScreen} /> */}
     </Stack.Navigator>

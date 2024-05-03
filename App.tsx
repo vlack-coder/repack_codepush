@@ -17,7 +17,7 @@ let codePushOptions = {checkFrequency: CodePush.CheckFrequency.MANUAL};
 
 function App(): JSX.Element {
   return (
-    // <GestureHandlerRootView style={{flex: 1}}>
+    <GestureHandlerRootView style={{flex: 1}}>
       <SafeAreaView
         style={{
           flex: 1,
@@ -27,7 +27,7 @@ function App(): JSX.Element {
           <Rootstack />
         </AuthProvider>
       </SafeAreaView>
-    // </GestureHandlerRootView>
+    </GestureHandlerRootView>
   );
 }
 

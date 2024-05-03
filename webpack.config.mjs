@@ -161,6 +161,10 @@ export default (env) => {
             /node_modules(.*[/\\])+metro/,
             /node_modules(.*[/\\])+abort-controller/,
             /node_modules(.*[/\\])+@callstack\/repack/,
+            /node_modules(.*[/\\])+react-native-qrcode-svg/,
+            /node_modules(.*[/\\])+rn-qr-generator/,
+            /node_modules(.*[/\\])+qrcode/,
+            // react-native-qrcode-svg  qrcode
           ],
           use: 'babel-loader',
         },
