@@ -14,6 +14,7 @@
     "release-android": "rm -rf ./android/app/build/generated/assets && cd android && ./gradlew assembleRelease",
     "login": "appcenter login",
     "pus": "appcenter codepush release -a ajims119-gmail.com/rapckA -c ./CodePush -t 1.0 --token 599594baa4e9e8c8a7edc55873f7da5cbd2f4c45",
+    "podinstall": "cd ios && NO_FLIPPER=1 pod install",
     "push": "yarn bundle && yarn pus"
   },
   "dependencies": {
@@ -25,11 +26,6 @@
     "@react-native-community/netinfo": "11.0.0",
     "@react-native-community/progress-bar-android": "1.0.5",
     "@react-native-community/progress-view": "1.4.2",
-    "@react-native-firebase/analytics": "18.9.0",
-    "@react-native-firebase/app": "18.9.0",
-    "@react-native-firebase/crashlytics": "18.9.0",
-    "@react-native-firebase/messaging": "18.9.0",
-    "@react-native-firebase/perf": "18.9.0",
     "@react-native-masked-view/masked-view": "0.3.0",
     "@react-navigation/bottom-tabs": "6.5.20",
     "@react-navigation/drawer": "6.6.3",
@@ -48,6 +44,7 @@
     "freerasp-react-native": "3.7.0",
     "geolib": "3.3.4",
     "jail-monkey": "^2.8.0",
+    "node-forge": "^1.3.1",
     "patch-package": "7.0.0",
     "qrcode": "1.5.3",
     "react": "18.2.0",
