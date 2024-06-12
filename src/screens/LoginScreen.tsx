@@ -11,6 +11,7 @@ import {
   encryptPayloadAES,
 } from '../utils/forge';
 import {buttocksObj} from './paylo0ad';
+import {toBase64} from '../utils/base64';
 // import {v4 as uuid} from 'uuid';
 // import {Yansh} from  'react-native-get-random-values'
 
@@ -32,10 +33,13 @@ const LoginScreen = () => {
     // encryptPayload(buttocksObj)
     // encryptPayloadAES(buttocksObj);
 
-    await decryptPayloadAES(
-      'QDrb3ZM2tPbz++HZtWEP9guI78hy3Hn58dZQ2LVjBr5gUOyf7EY9Si/94ngwKea1gmVCEGdymHbZ3uEOg9JxBgl01GMtwKLXNettWaPeGR0zfDzlZl6lyVC3MZLGSLwhJZhBhoiu5aq3t2s+ejIZhnVmLCzpu+HO4p45qd0fJb6Eb7P+Ng1cJvoqscuUUiiO5CRCAHoIHUSrTJcSImR0WE9H7vI=',
-      'jhtVNbd5e94nF7eC4NPAo7nXQSGcGFHfogXT4WJ3+MhFRdB22h9iifH17AD/2z3BMaIBZvaov+6vl3Pw1A86lptP2+Me7OQNzI79Zx9L+Lm/iUHbjffbBKGWTR3onIERN28pDCK1o48eFKVcP3nCGv6K2237e+99OrAJmuy/uvQ=',
-    );
+    const ass = toBase64('aEQtfhVIMlUbRZ+9+62LAv9yLpvxlKO/de6UgUX2aTE=');
+    console.log('ass', ass);
+
+    // await decryptPayloadAES(
+    //   'QDrb3ZM2tPbz++HZtWEP9guI78hy3Hn58dZQ2LVjBr5gUOyf7EY9Si/94ngwKea1gmVCEGdymHbZ3uEOg9JxBgl01GMtwKLXNettWaPeGR0zfDzlZl6lyVC3MZLGSLwhJZhBhoiu5aq3t2s+ejIZhnVmLCzpu+HO4p45qd0fJb6Eb7P+Ng1cJvoqscuUUiiO5CRCAHoIHUSrTJcSImR0WE9H7vI=',
+    //   'jhtVNbd5e94nF7eC4NPAo7nXQSGcGFHfogXT4WJ3+MhFRdB22h9iifH17AD/2z3BMaIBZvaov+6vl3Pw1A86lptP2+Me7OQNzI79Zx9L+Lm/iUHbjffbBKGWTR3onIERN28pDCK1o48eFKVcP3nCGv6K2237e+99OrAJmuy/uvQ=',
+    // );
 
     // const nyansh = await decryptPayload(
     //   'p3HAqgxumXMCSeoS07BStO5g+FFh/vJ0u/Q/zMNwmYtYwXNkUznZvN4RDYGvgA52k90u974qKk25geAQyuJfTjElNcteEAJbjmoXa76Uug27UihTj9dFmVnMq6qd/OUY8s6ZmCXKcUtYPeERBYvwyO4shAPY1EuIi2hct6ZIx14=',
